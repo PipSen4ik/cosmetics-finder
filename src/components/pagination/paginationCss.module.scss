@@ -1,0 +1,96 @@
+.pagination, .pagination ul, .prevPage, .nextPage, .firstPage, .lastPage {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.prevPage, .page, .nextPage, .firstPage, .lastPage {
+  cursor: pointer;
+  padding: 2px 7px;
+}
+
+.dots {
+  cursor: inherit;
+}
+
+.pagination ul {
+  margin-bottom: 0;
+}
+
+.page {
+  font-size: 36px;
+}
+
+.prevPage img, .nextPage img, .firstPage img, .lastPage img {
+  height: auto;
+  width: 100%;
+}
+
+.firstPage, .prevPage, .nextPage, .page {
+  margin-right: 10px;
+}
+
+.page.active {
+  position: relative;
+}
+
+.page.active::after {
+  content: "";
+  border-bottom: 1px solid black;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+/*Media*/
+
+@media (max-width: 1024px) {
+  .page {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    font-size: 24px;
+  }
+
+  .prevPage img, .nextPage img, .firstPage img, .lastPage img {
+    height: 12px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .page {
+    font-size: 20px;
+  }
+
+  .firstPage, .prevPage, .nextPage, .page {
+    margin-right: 6px;
+  }
+
+  .prevPage, .page, .nextPage, .firstPage, .lastPage {
+    padding: 1px 5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .page {
+    font-size: 16px;
+  }
+
+  .firstPage, .prevPage, .nextPage, .page {
+    margin-right: 5px;
+  }
+  .prevPage, .page, .nextPage, .firstPage, .lastPage {
+    padding: 1px 4px;
+  }
+
+  .prevPage img, .nextPage img, .firstPage img, .lastPage img {
+    max-height: 10px;
+    width: 100%;
+  }
+}

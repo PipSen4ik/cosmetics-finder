@@ -1,0 +1,13 @@
+@import '~antd/dist/antd.css';
+
+.ant-image, .ant-image-mask, .ant-image img {
+  height: 100%;
+}
+
+.ant-image-mask:hover {
+  opacity: 0;
+}
+
+.ant-image-preview-wrap ul.ant-image-preview-operations li:nth-child(n+4) {
+  display: none;
+}
